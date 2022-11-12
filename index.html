@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Test CSS</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <script src="script.js"></script>
+    <script src="jQuery.js"></script>
+    <body>
+        <div class="background">
+            <header>
+                <h1>This is the title</h1>
+
+                <div class="menu_selection">
+                    <div class="page_selector_partial">
+                        <input type="radio" onclick="showViewPage(this)" id="mainPage" name="view_page" value="mainPage" checked></input>
+                        <label for="mainPage">Main Page</label>
+                    </div>
+
+                    <div class="page_selector_partial">
+                        <input type="radio" onclick="showViewPage(this)" id="anotherPage" name="view_page" value="anotherPage"></input>
+                        <label for="anotherPage">Another Page</label>
+                    </div>
+
+                    <div class="page_selector_partial">
+                        <input type="radio" onclick="showViewPage(this)" id="tutorialPage" name="view_page" value="tutorialPage"></input>
+                        <label for="tutorialPage">Tutorial Page</label>
+                    </div>
+                </div>
+            </div>
+
+            </header>
+            <main>
+                <!-- ***************************************** MAIN VIEW ***************************************** -->
+                <div class="mainView background" id="mainView">
+                    <h2>This is the content of the page</h2>
+                    <ul>
+                        <li>Tomatoes</li>
+                        <li>Potatoes</li>
+                        <li>Oignons</li>
+                    </ul>
+                    
+                    <h2>This is another content</h2>
+                    <ol>
+                        <li>The other things</li>
+                        <ul>
+                            <li>blahblah</li>
+                            <li>bluhbluh</li>
+                        </ul>
+                        <li>Another things</li>
+                    </ol>
+                </div>
+
+                <!-- ***************************************** ANOTHER VIEW ***************************************** -->
+                <div class="anotherView background" id="anotherView">
+                    <h2>Another View</h2>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Meme Name</th>
+                                <th>Link</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                            <script>getApiCall();</script>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ***************************************** TUTORIAL VIEW ***************************************** -->
+                <div class="tutorialView background" id="tutorialView">
+                    <h2>Tutorial view</h2>
+                    <h3>This is a small quiz</h3>
+                    <div id="quizStartSection">
+                        <p>Press <button class="button-80" role="button" onclick="startQuizz(false);">Start</button> to begin</p>
+                    </div>
+                </div>
+            </main>
+    </body>
+</html>
